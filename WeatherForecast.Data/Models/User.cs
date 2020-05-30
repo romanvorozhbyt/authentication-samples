@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace AuthTraining.Models
+﻿namespace WeatherForecast.Data.Models
 {
     public class User
     {
