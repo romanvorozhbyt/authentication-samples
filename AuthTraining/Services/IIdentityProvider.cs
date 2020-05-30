@@ -1,11 +1,7 @@
-﻿using AuthTraining.Models;
-
-namespace AuthTraining.Services
+﻿namespace AuthTraining.Services
 {
     public interface IIdentityProvider
     {
-        string AuthenticateUser(string userName, string password);
-
-        bool ValidateToken(string token);
+        string AuthenticateUser(string userName, string password);  
     }
 }

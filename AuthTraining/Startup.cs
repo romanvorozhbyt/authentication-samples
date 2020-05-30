@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherForecastApi.Models;
 
 namespace AuthTraining
 {
@@ -42,9 +43,9 @@ namespace AuthTraining
                     ValidateAudience = true,
                     ValidateLifetime = true,
                     ValidateIssuerSigningKey = true,
-                    ValidIssuer = Configuration["JWT:Issuer"],
-                    ValidAudience = Configuration["JWT:Audience"],
-                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration["JWT:SecretKey"]))
+                    ValidIssuer = Configuration[ApplicationSettingsConstants.JwtIssuer],
+                    ValidAudience = Configuration[ApplicationSettingsConstants.JwtAudience],
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(Configuration[ApplicationSettingsConstants.JwtSecretKey]))
                 };
                 options.Events = new JwtBearerEvents
                 {

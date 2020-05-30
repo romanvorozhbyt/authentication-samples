@@ -6,6 +6,8 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using WeatherForecast.Data.Models;
+using WeatherForecastApi.Models;
 
 namespace AuthTraining.Services
 {
@@ -25,7 +27,7 @@ namespace AuthTraining.Services
                 return string.Empty;
             }
             IdentityModelEventSource.ShowPII = true;
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:SecretKey"]));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config[ApplicationSettingsConstants.JwtSecretKey]));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256Signature);
             var claims = new[]
             {
@@ -39,17 +41,12 @@ namespace AuthTraining.Services
                 Subject = new ClaimsIdentity(claims),
                 Expires = DateTime.Now.AddDays(1),
                 SigningCredentials = credentials,
-                Audience = _config["Jwt:Audience"],
-                Issuer = _config["Jwt:Issuer"]
+                Audience = _config[ApplicationSettingsConstants.JwtAudience],
+                Issuer = _config[ApplicationSettingsConstants.JwtIssuer]
             };
             var securitytokenHandler = new JwtSecurityTokenHandler();
             var token = securitytokenHandler.CreateToken(tokenDescriptor);
             return securitytokenHandler.WriteToken(token);
-        }
-
-        public bool ValidateToken(string token)
-        {
-            throw new NotImplementedException();
         }
     }
 }

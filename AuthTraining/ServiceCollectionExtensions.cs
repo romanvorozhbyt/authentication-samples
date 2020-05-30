@@ -1,10 +1,6 @@
 ﻿using AuthTraining.Services;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Microsoft.Extensions.DependencyInjection;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+using WeatherForecast.Data;
 
 namespace AuthTraining
 {
@@ -14,6 +10,7 @@ namespace AuthTraining
         {
             services.AddTransient<IIdentityProvider, IdentityProvider>();
             services.AddTransient<IAuthenticationTokenProvider, JwtTokenProvider>();
+            services.AddData();
             return services;
         }
     }
