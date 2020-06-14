@@ -1,4 +1,6 @@
-﻿namespace WeatherForecast.Data.Models
+﻿using System;
+
+namespace WeatherForecast.Data.Models
 {
     public class User
     {

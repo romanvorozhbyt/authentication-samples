@@ -18,6 +18,13 @@ namespace WeatherForecast.Data.NewFolder
             return appUsers;
         }
 
+        public User GetByName(string userName)
+        {
+            if (string.IsNullOrWhiteSpace(userName))
+                throw new ArgumentNullException(nameof(userName), "userName was null or empty");
+            return appUsers.FirstOrDefault(x => x.UserName == userName);
+        }
+
         public IEnumerable<User> Search(Func<User, bool> predicate)
         {
             return appUsers.Where(predicate);
