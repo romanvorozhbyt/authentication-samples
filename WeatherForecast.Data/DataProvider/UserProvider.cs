@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using WeatherForecast.Contracts.Exceptions;
 using WeatherForecast.Contracts.Models;
 
 namespace WeatherForecast.Data.NewFolder
@@ -21,7 +22,7 @@ namespace WeatherForecast.Data.NewFolder
         public User GetByName(string userName)
         {
             if (string.IsNullOrWhiteSpace(userName))
-                throw new ArgumentNullException(nameof(userName), "userName was null or empty");
+                throw new InvalidInboundException(nameof(userName), "userName was null or empty");
             return appUsers.FirstOrDefault(x => x.UserName == userName);
         }
 

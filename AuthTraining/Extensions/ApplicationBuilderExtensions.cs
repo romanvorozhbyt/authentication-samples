@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Diagnostics;
 using Microsoft.AspNetCore.Http;
+using System.Net;
+using WeatherForecast.Contracts.Exceptions;
 using WeatherForecastApi.Models.ExceptionHandling;
 
 namespace WeatherForecastApi.Extensions
@@ -20,6 +22,11 @@ namespace WeatherForecastApi.Extensions
                     {
                         errorResponse.StatusCode = httpException.StatusCode;
                         errorResponse.Message = httpException.Message;
+                    }else if(exception is InvalidInboundException inboundException)
+                    {
+                        errorResponse.StatusCode = HttpStatusCode.BadRequest;
+                        errorResponse.Message = inboundException.Message;
+                        errorResponse.AdditionalParameters = new { inboundException.ParamName };
                     }
                     context.Response.StatusCode = (int)errorResponse.StatusCode;
                     context.Response.ContentType = "application/json";

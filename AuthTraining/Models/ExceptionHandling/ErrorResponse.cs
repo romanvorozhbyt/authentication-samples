@@ -9,6 +9,8 @@ namespace WeatherForecastApi.Models.ExceptionHandling
 
         public string Message { get; set; } = "An unexpected error occured";
 
+        public object AdditionalParameters { get; set; }
+
         public string ToJsonString()
         {
             return JsonConvert.SerializeObject(this);
