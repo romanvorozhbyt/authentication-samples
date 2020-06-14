@@ -43,7 +43,7 @@ namespace AuthTraining.Services
                 SigningCredentials = credentials,
                 Audience = _config[ApplicationSettingsConstants.JwtAudience],
                 Issuer = _config[ApplicationSettingsConstants.JwtIssuer]
-            };
+            }; 
             var securitytokenHandler = new JwtSecurityTokenHandler();
             var token = securitytokenHandler.CreateToken(tokenDescriptor);
             return securitytokenHandler.WriteToken(token);

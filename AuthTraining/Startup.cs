@@ -15,6 +15,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WeatherForecastApi.Extensions;
 using WeatherForecastApi.Models;
 
 namespace AuthTraining
@@ -90,7 +91,7 @@ namespace AuthTraining
             }
 
             //app.UseHttpsRedirection();
-
+            app.UseNativeGlobalExceptionHandling();
             app.UseRouting();
             app.UseCors(x => x
                 .AllowAnyOrigin()
