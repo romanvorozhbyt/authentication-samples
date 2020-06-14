@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 using WeatherForecast.Data;
 using WeatherForecastApi.Models;
 
-namespace AuthTraining
+namespace WeatherForecastApi.Extensions
 {
     public static class ServiceCollectionExtensions
     {
@@ -52,7 +52,7 @@ namespace AuthTraining
                    }
                };
            });
-           return services;
+            return services;
         }
 
         public static IServiceCollection AddSwaggerBearerAuthentication(this IServiceCollection services)
