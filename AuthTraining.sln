@@ -5,7 +5,9 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecastApi", "AuthTraining\WeatherForecastApi.csproj", "{1DCF6A30-3081-40D4-B231-86F12DFCF6AE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast.Data", "WeatherForecast.Data\WeatherForecast.Data.csproj", "{67B2914B-CCDC-40EE-B837-AD416C71682E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherForecast.Data", "WeatherForecast.Data\WeatherForecast.Data.csproj", "{67B2914B-CCDC-40EE-B837-AD416C71682E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherForecast.Contracts", "WeatherForecast.Contracts\WeatherForecast.Contracts.csproj", "{4BADEF73-6380-4E86-A4F6-DD6CAB1D6D90}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{67B2914B-CCDC-40EE-B837-AD416C71682E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67B2914B-CCDC-40EE-B837-AD416C71682E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67B2914B-CCDC-40EE-B837-AD416C71682E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4BADEF73-6380-4E86-A4F6-DD6CAB1D6D90}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4BADEF73-6380-4E86-A4F6-DD6CAB1D6D90}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4BADEF73-6380-4E86-A4F6-DD6CAB1D6D90}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4BADEF73-6380-4E86-A4F6-DD6CAB1D6D90}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,4 +1,4 @@
-﻿using WeatherForecast.Data.Models;
+﻿using WeatherForecast.Contracts.Models;
 
 namespace AuthTraining.Services
 {

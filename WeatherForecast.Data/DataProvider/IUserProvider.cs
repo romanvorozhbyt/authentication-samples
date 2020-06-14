@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using WeatherForecast.Data.Models;
+using WeatherForecast.Contracts.Models;
 
 namespace WeatherForecast.Data.NewFolder
 {

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using WeatherForecast.Data.Models;
+using WeatherForecast.Contracts.Models;
 
 namespace WeatherForecast.Data.NewFolder
 {

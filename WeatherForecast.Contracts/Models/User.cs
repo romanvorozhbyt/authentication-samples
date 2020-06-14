@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace WeatherForecast.Data.Models
+namespace WeatherForecast.Contracts.Models
 {
     public class User
     {

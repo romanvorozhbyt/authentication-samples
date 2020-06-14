@@ -6,7 +6,7 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using WeatherForecast.Data.Models;
+using WeatherForecast.Contracts.Models;
 using WeatherForecastApi.Models;
 
 namespace AuthTraining.Services
